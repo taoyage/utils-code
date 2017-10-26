@@ -2,11 +2,12 @@
  * @Author: accord
  * @Date:   2017-10-22 19:19:53
  * @Last Modified by:   accord
- * @Last Modified time: 2017-10-22 21:38:17
+ * @Last Modified time: 2017-10-26 15:36:51
  */
 
 import React from 'react';
 import { Form } from 'antd';
+import PropTypes from 'prop-types';
 import { createFieldDecorator } from './utils';
 
 const FormItem = Form.Item;
@@ -37,6 +38,14 @@ const Bform = ({ fields, init, form, layout = {}, event = {}, ...others }) => {
       )}
     </Form>
   );
+};
+
+Bform.PropTypes = {
+  fields: PropTypes.array,
+  init: PropTypes.object,
+  form: PropTypes.object,
+  event: PropTypes.object,
+  others: PropTypes.object
 };
 
 export default Bform;
